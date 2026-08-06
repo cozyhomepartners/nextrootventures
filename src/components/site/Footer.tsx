@@ -1,36 +1,39 @@
-import footer1 from "@/assets/footer1.png.asset.json";
-import footer2 from "@/assets/footer2.png.asset.json";
-import { CALENDLY } from "./Header";
+import { CALENDLY, SCALE_GTM } from "./Header";
 
 export function Footer() {
   return (
-    <footer id="contactme" className="px-4 pb-8 md:px-8">
-      <div className="relative overflow-hidden rounded-lg bg-navy py-16">
-        <div
-          className="pointer-events-none absolute inset-0 bg-contain bg-left bg-no-repeat"
-          style={{ backgroundImage: `url(${footer1.url})` }}
-          aria-hidden="true"
-        />
-        <div
-          className="pointer-events-none absolute inset-0 bg-contain bg-right bg-no-repeat"
-          style={{ backgroundImage: `url(${footer2.url})` }}
-          aria-hidden="true"
-        />
-        <div className="relative mx-auto w-full max-w-[1321px] px-6 text-center md:px-12">
-          <h2 className="text-gradient-brand">Contact Me</h2>
-          <p className="mt-2 mb-8 text-base font-bold tracking-wide text-white uppercase">
-            Let's get started with your Scalable sales strategy!
-          </p>
-          <a href={CALENDLY}>
-            <button className="h-[50px] rounded-md bg-mint px-6 text-lg font-semibold text-navy transition-colors hover:bg-mint-bright">
-              Get Started
-            </button>
+    <footer id="contact" className="bg-paper">
+      <div className="mx-auto max-w-6xl px-6 py-20 md:px-10">
+        <h2 className="max-w-xl text-ink">Prove the motion before you hire for it.</h2>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <a
+            href={CALENDLY}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center bg-ink px-6 py-3 text-sm font-medium text-paper transition-opacity hover:opacity-90"
+          >
+            Book a 30-minute call
           </a>
-          <ul className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-sm font-semibold uppercase text-steel">
-            <li>San Francisco, CA</li>
-            <li>Scale GTM Advisors</li>
-            <li>Copyright © 2024</li>
-          </ul>
+          <a
+            href={SCALE_GTM}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center border border-rule px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-ink"
+          >
+            Scale GTM ↗
+          </a>
+        </div>
+        <div className="mt-16 flex flex-wrap items-center justify-between gap-4 border-t border-rule pt-6 text-xs tracking-[0.14em] text-ink-soft uppercase">
+          <span>Charles Hsieh — San Francisco, CA</span>
+          <a
+            href="https://www.linkedin.com/in/charleschsieh/"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-ink"
+          >
+            LinkedIn ↗
+          </a>
+          <span>© {new Date().getFullYear()}</span>
         </div>
       </div>
     </footer>

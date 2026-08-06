@@ -1,7 +1,6 @@
 import logo2 from "@/assets/logo2.png.asset.json";
 import logo3 from "@/assets/logo3.png.asset.json";
 import logo4 from "@/assets/logo4.png.asset.json";
-import img1 from "@/assets/image_1.png.asset.json";
 
 const logos = [
   { src: logo4.url, alt: "GrowingIO" },
@@ -10,7 +9,6 @@ const logos = [
 ];
 
 export function Logos() {
-  void img1;
   return (
     <section className="border-b border-rule">
       <div className="mx-auto max-w-6xl px-6 py-14 md:px-10">

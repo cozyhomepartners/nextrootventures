@@ -8,11 +8,13 @@ const logos = [
   { src: logo3.url, alt: "Coding Dojo" },
 ];
 
+const wordmarks = ["Zabal Media", "Pathrise", "Welcome", "Pebblous.ai"];
+
 export function Logos() {
   return (
     <section className="border-b border-rule">
       <div className="mx-auto max-w-6xl px-6 py-14 md:px-10">
-        <h2 className="section-title">Companies I have worked with</h2>
+        <h2 className="eyebrow-muted">Companies I have worked with</h2>
         <div className="mt-8 flex flex-wrap items-center gap-x-14 gap-y-8">
           {logos.map((l) => (
             <img
@@ -22,6 +24,14 @@ export function Logos() {
               loading="lazy"
               className="h-8 w-auto opacity-70 brightness-0 saturate-0"
             />
+          ))}
+          {wordmarks.map((w) => (
+            <span
+              key={w}
+              className="text-lg font-medium tracking-tight text-ink-soft opacity-90"
+            >
+              {w}
+            </span>
           ))}
         </div>
       </div>

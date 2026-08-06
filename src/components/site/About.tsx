@@ -10,7 +10,7 @@ export function About() {
   return (
     <section id="track-record" className="border-b border-rule">
       <div className="mx-auto max-w-6xl px-6 py-20 md:px-10">
-        <h2 className="section-title">Track record</h2>
+        <h2 className="eyebrow-muted">Track record</h2>
         <ul className="mt-12 space-y-4">
           {record.map((r) => (
             <li key={r} className="flex gap-4 border-t border-rule pt-4 text-base text-ink">

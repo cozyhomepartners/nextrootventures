@@ -76,7 +76,7 @@
 
   /* Scale GTM brand palette */
   --navy: oklch(0.259 0.024 246.3);
-  --navy-panel: oklch(0.299 0.034 249;0);
+  --navy-panel: oklch(0.299 0.034 249);
   --navy-line: oklch(0.404 0.054 249.3);
   --mint: oklch(0.75 0.134 175);
   --mint-bright: oklch(0.808 0.145 175.1);

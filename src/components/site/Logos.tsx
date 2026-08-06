@@ -1,7 +1,7 @@
 import logo2 from "@/assets/logo2.png.asset.json";
 import logo3 from "@/assets/logo3.png.asset.json";
 import logo4 from "@/assets/logo4.png.asset.json";
-import zabal from "@/assets/zabal-new.png.asset.json";
+import zabal from "@/assets/zabal-mono.png.asset.json";
 import pebblous from "@/assets/pebblous-new.png.asset.json";
 import welcome from "@/assets/welcome-new.png.asset.json";
 import pathrise from "@/assets/pathrise.svg";
@@ -10,7 +10,7 @@ const logos = [
   { src: logo4.url, alt: "GrowingIO" },
   { src: logo2.url, alt: "Byteboard" },
   { src: logo3.url, alt: "Coding Dojo" },
-  { src: zabal.url, alt: "Zabal Media", onDark: true },
+  { src: zabal.url, alt: "Zabal Media", plain: true },
   { src: pathrise, alt: "Pathrise" },
   { src: welcome.url, alt: "Welcome", plain: true },
   { src: pebblous.url, alt: "Pebblous.ai", plain: true },
@@ -23,11 +23,7 @@ export function Logos() {
         <h2 className="eyebrow-muted">Companies I have worked with</h2>
         <div className="mt-8 flex flex-wrap items-center gap-x-10 gap-y-8">
           {logos.map((l) =>
-            l.onDark ? (
-              <span key={l.alt} className="inline-flex items-center bg-ink px-3 py-2">
-                <img src={l.src} alt={l.alt} loading="lazy" className="h-6 w-auto" />
-              </span>
-            ) : l.plain ? (
+            l.plain ? (
               <img
                 key={l.alt}
                 src={l.src}

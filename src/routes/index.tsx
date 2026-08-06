@@ -22,6 +22,39 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://tryscalegtm.com/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              name: title,
+              url: "https://tryscalegtm.com/",
+            },
+            {
+              "@type": "Person",
+              name: "Charles Hsieh",
+              jobTitle: "Fractional VP of Sales",
+              url: "https://tryscalegtm.com/",
+              description,
+              sameAs: ["https://www.linkedin.com/in/charleschsieh/"],
+            },
+            {
+              "@type": "Service",
+              name: "Fractional VP of Sales & GTM Leadership",
+              serviceType: "Fractional sales leadership",
+              description:
+                "Fractional VP of Sales and GTM leadership for seed to Series B founders: prove the motion, build the playbook, hire the team, hand it over.",
+              provider: { "@type": "Person", name: "Charles Hsieh" },
+              areaServed: "US",
+            },
+          ],
+        }),
+      },
+    ],
   }),
   component: Index,
 });

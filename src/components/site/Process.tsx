@@ -25,7 +25,7 @@ export function Process() {
   return (
     <section id="engagement" className="border-b border-rule">
       <div className="mx-auto max-w-6xl px-6 py-20 md:px-10">
-        <span className="eyebrow-muted">How an engagement runs</span>
+        <h2 className="section-title">How an engagement runs</h2>
         <ol className="mt-12 grid gap-10 md:grid-cols-4">
           {steps.map((s) => (
             <li key={s.n} className="border-t border-rule pt-4">

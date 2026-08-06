@@ -1,14 +1,20 @@
 import logo2 from "@/assets/logo2.png.asset.json";
 import logo3 from "@/assets/logo3.png.asset.json";
 import logo4 from "@/assets/logo4.png.asset.json";
+import zabal from "@/assets/zabal.jpeg.asset.json";
+import pebblous from "@/assets/pebblous.png.asset.json";
+import welcome from "@/assets/welcome.png.asset.json";
+import pathrise from "@/assets/pathrise.svg";
 
 const logos = [
   { src: logo4.url, alt: "GrowingIO" },
   { src: logo2.url, alt: "Byteboard" },
   { src: logo3.url, alt: "Coding Dojo" },
+  { src: zabal.url, alt: "Zabal Media", keepColor: true },
+  { src: pathrise, alt: "Pathrise" },
+  { src: welcome.url, alt: "Welcome" },
+  { src: pebblous.url, alt: "Pebblous.ai" },
 ];
-
-const wordmarks = ["Zabal Media", "Pathrise", "Welcome", "Pebblous.ai"];
 
 export function Logos() {
   return (
@@ -22,16 +28,12 @@ export function Logos() {
               src={l.src}
               alt={l.alt}
               loading="lazy"
-              className="h-8 w-auto opacity-70 brightness-0 saturate-0"
+              className={
+                l.keepColor
+                  ? "h-8 w-auto opacity-80"
+                  : "h-8 w-auto opacity-70 brightness-0 saturate-0"
+              }
             />
-          ))}
-          {wordmarks.map((w) => (
-            <span
-              key={w}
-              className="text-lg font-medium tracking-tight text-ink-soft opacity-90"
-            >
-              {w}
-            </span>
           ))}
         </div>
       </div>

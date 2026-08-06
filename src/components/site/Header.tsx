@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import scaleGtmLogo from "@/assets/scalegtm-logo.svg";
 
 export const CALENDLY = "https://calendly.com/charleschsieh/30-minutes";
 export const SCALE_GTM = "https://tryscalegtm.com/";
@@ -18,8 +19,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-rule bg-paper/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10">
-        <a href="#top" className="text-sm font-semibold tracking-tight text-ink">
-          Charles Hsieh
+        <a href={SCALE_GTM} target="_blank" rel="noreferrer" aria-label="Scale GTM">
+          <img src={scaleGtmLogo} alt="Scale GTM" className="h-5 w-auto" />
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">

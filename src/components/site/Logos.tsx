@@ -10,7 +10,7 @@ const logos = [
   { src: logo4.url, alt: "GrowingIO" },
   { src: logo2.url, alt: "Byteboard" },
   { src: logo3.url, alt: "Coding Dojo" },
-  { src: zabal.url, alt: "Zabal Media", plain: true },
+  { src: zabal.url, alt: "Zabal Media", plain: true, size: "h-5" },
   { src: pathrise, alt: "Pathrise" },
   { src: welcome.url, alt: "Welcome", plain: true },
   { src: pebblous.url, alt: "Pebblous.ai", plain: true },
@@ -29,7 +29,7 @@ export function Logos() {
                 src={l.src}
                 alt={l.alt}
                 loading="lazy"
-                className="h-8 w-auto mix-blend-multiply grayscale contrast-[2.2]"
+                className={`${l.size ?? "h-8"} w-auto mix-blend-multiply grayscale contrast-[2.2] opacity-80`}
               />
             ) : (
               <img

@@ -12,8 +12,8 @@ const logos = [
   { src: logo3.url, alt: "Coding Dojo" },
   { src: zabal.url, alt: "Zabal Media", onDark: true },
   { src: pathrise, alt: "Pathrise" },
-  { src: welcome.url, alt: "Welcome" },
-  { src: pebblous.url, alt: "Pebblous.ai" },
+  { src: welcome.url, alt: "Welcome", plain: true },
+  { src: pebblous.url, alt: "Pebblous.ai", plain: true },
 ];
 
 export function Logos() {
@@ -27,6 +27,14 @@ export function Logos() {
               <span key={l.alt} className="inline-flex items-center bg-ink px-3 py-2">
                 <img src={l.src} alt={l.alt} loading="lazy" className="h-6 w-auto" />
               </span>
+            ) : l.plain ? (
+              <img
+                key={l.alt}
+                src={l.src}
+                alt={l.alt}
+                loading="lazy"
+                className="h-8 w-auto opacity-70 mix-blend-multiply grayscale"
+              />
             ) : (
               <img
                 key={l.alt}

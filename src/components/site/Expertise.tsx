@@ -1,47 +1,33 @@
-import img1 from "@/assets/img1.png.asset.json";
-import img2 from "@/assets/img2.png.asset.json";
-import img3 from "@/assets/img3.png.asset.json";
-
 const items = [
   {
-    img: img1.url,
-    alt: "Founder presenting a sales strategy on a whiteboard",
-    title: "Sales Coaching",
-    body: "With years of proven SaaS sales and sales leader experience in diverse industries, I want to be hands-on in helping you to define your pitch, identify ideal customer profile, experiment with different pricing models, close businesses, build the sales playbook, and repeat.",
+    title: "First revenue, from zero",
+    body: "Pre-revenue to first repeatable deals: ICP definition, outbound motion, discovery and demo scripts, and the first 10–20 reference logos.",
   },
   {
-    img: img2.url,
-    alt: "Hiring manager shaking hands with a candidate",
-    title: "Talent Recruiting",
-    body: "Are you transitioning from founder-led sales and not sure the best way to recruit or assess the sales candidates? Having done hundreds of interviews in top tier companies, let's figure out the best candidate profiles and recruiting process for the stage of your growth plan.",
+    title: "Founder-led sales handoff",
+    body: "Turn what the founder does intuitively into a documented playbook, then hire and ramp the AEs and SDRs who can run it without you.",
   },
   {
-    img: img3.url,
-    alt: "Team mapping out a go-to-market plan on a table",
-    title: "Strategy Planning",
-    body: 'Not sure how to launch a new product, build a repeatable sales process, setting quota and sales compensation plan, new market expansion, pricing model, and many other "firsts"? We can co-author a strategy or experimentation that fits with company\'s growth plan.',
+    title: "Pricing and packaging",
+    body: "Rebuild pricing, tiers, and contract structure so deal size and win rate move together instead of trading off.",
+  },
+  {
+    title: "Stalled growth reset",
+    body: "Diagnose pipeline, conversion, and team performance; rebuild forecasting, comp, and territory design to restart compounding growth.",
   },
 ];
 
 export function Expertise() {
   return (
-    <section id="expertise" className="py-18">
-      <div className="mx-auto w-full max-w-[1321px] px-6 md:px-12">
-        <span className="eyebrow mb-4">What we do</span>
-        <h2 className="mb-12">Expertise</h2>
-
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <section id="help" className="border-b border-rule">
+      <div className="mx-auto max-w-6xl px-6 py-20 md:px-10">
+        <span className="eyebrow-muted">Where I help</span>
+        <div className="mt-12 grid gap-x-16 gap-y-12 md:grid-cols-2">
           {items.map((i) => (
-            <article
-              key={i.title}
-              className="h-full rounded-lg border border-card-mint-border bg-card-mint p-2"
-            >
-              <img src={i.img} alt={i.alt} className="w-full rounded-lg" loading="lazy" />
-              <div className="p-4">
-                <h3 className="mb-2">{i.title}</h3>
-                <p className="text-navy">{i.body}</p>
-              </div>
-            </article>
+            <div key={i.title}>
+              <h3 className="text-ink">{i.title}</h3>
+              <p className="mt-2 max-w-lg text-sm text-ink-soft">{i.body}</p>
+            </div>
           ))}
         </div>
       </div>

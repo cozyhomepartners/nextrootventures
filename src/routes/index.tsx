@@ -1,14 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
-import { Testimonials } from "@/components/site/Testimonials";
 import { Expertise } from "@/components/site/Expertise";
+import { Process } from "@/components/site/Process";
 import { About } from "@/components/site/About";
+import { Logos } from "@/components/site/Logos";
+import { Testimonials } from "@/components/site/Testimonials";
 import { Footer } from "@/components/site/Footer";
 
-const title = "Scale GTM | Sales Strategy Advisor for Early Stage Founders";
+const title = "Charles Hsieh | Fractional VP of Sales & GTM Leadership";
 const description =
-  "Scale GTM helps early stage startup founders build a 10x sales strategy through sales coaching, talent recruiting, and go-to-market strategy planning.";
+  "Fractional VP of Sales for seed to Series B founders: prove the motion, build the playbook, hire the team, hand it over.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,9 +32,11 @@ function Index() {
       <Header />
       <main>
         <Hero />
-        <Testimonials />
         <Expertise />
+        <Process />
         <About />
+        <Logos />
+        <Testimonials />
       </main>
       <Footer />
     </div>

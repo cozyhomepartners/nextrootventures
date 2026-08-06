@@ -19,7 +19,7 @@
  */
 
 @theme inline {
-  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -60,52 +60,42 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  --color-navy: var(--navy);
-  --color-navy-panel: var(--navy-panel);
-  --color-navy-line: var(--navy-line);
-  --color-mint: var(--mint);
-  --color-mint-bright: var(--mint-bright);
-  --color-mist: var(--mist);
-  --color-card-mint: var(--card-mint);
-  --color-card-mint-border: var(--card-mint-border);
-  --color-steel: var(--steel);
+  --color-paper: var(--paper);
+  --color-paper-deep: var(--paper-deep);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-rust: var(--rust);
+  --color-rule: var(--rule);
 }
 
 :root {
   --radius: 0.5rem;
 
-  /* Scale GTM brand palette */
-  --navy: oklch(0.259 0.024 246.3);
-  --navy-panel: oklch(0.299 0.034 249);
-  --navy-line: oklch(0.404 0.054 249.3);
-  --mint: oklch(0.75 0.134 175);
-  --mint-bright: oklch(0.808 0.145 175.1);
-  --mist: oklch(0.958 0.008 168.8);
-  --card-mint: oklch(0.941 0.019 176.4);
-  --card-mint-border: oklch(0.889 0.051 176);
-  --steel: oklch(0.727 0.044 246.2);
+  /* Editorial paper palette */
+  --paper: oklch(0.958 0.006 85);
+  --paper-deep: oklch(0.928 0.008 85);
+  --ink: oklch(0.201 0.004 0);
+  --ink-soft: oklch(0.469 0.008 60);
+  --rust: oklch(0.535 0.135 42);
+  --rule: oklch(0.869 0.008 85);
 
-  --gradient-headline: linear-gradient(to right, oklch(1 0 0), oklch(0.798 0.131 185.6));
-  --gradient-badge: linear-gradient(
-    90deg,
-    color-mix(in oklab, var(--mint) 22%, transparent) 0%,
-    color-mix(in oklab, var(--navy-line) 25%, transparent) 100%
-  );
-
-  --background: oklch(0.958 0.008 168.8);
-  --foreground: oklch(0.259 0.024 246.3);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.259 0.024 246.3);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.259 0.024 246.3);
-  --primary: oklch(0.75 0.134 175);
-  --primary-foreground: oklch(0.259 0.024 246.3);
-  --secondary: oklch(0.941 0.019 176.4);
-  --secondary-foreground: oklch(0.259 0.024 246.3);
-  --muted: oklch(0.941 0.019 176.4);
-  --muted-foreground: oklch(0.404 0.054 249.3);
-  --accent: oklch(0.889 0.051 176);
-  --accent-foreground: oklch(0.259 0.024 246.3);
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: var(--paper);
+  --card-foreground: var(--ink);
+  --popover: var(--paper);
+  --popover-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: var(--paper);
+  --secondary: var(--paper-deep);
+  --secondary-foreground: var(--ink);
+  --muted: var(--paper-deep);
+  --muted-foreground: var(--ink-soft);
+  --accent: var(--paper-deep);
+  --accent-foreground: var(--ink);
+  --border: var(--rule);
+  --input: var(--rule);
+  --ring: var(--ink);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(0.889 0.051 176);
@@ -170,42 +160,48 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    line-height: 1.5;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
   }
 
   h1,
   h2,
   h3 {
     font-weight: 500;
-    line-height: 1.1;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5.6vw, 4.25rem);
   }
 
   h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.4;
   }
-}
-
-@utility text-gradient-brand {
-  background: var(--gradient-headline);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
 }
 
 @utility eyebrow {
   display: block;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--mint);
+  color: var(--rust);
 }
 
-@utility bg-gradient-badge {
-  background: var(--gradient-badge);
+@utility eyebrow-muted {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
 }

@@ -77,18 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Scale GTM | Sales Strategy for Early Stage Founders" },
+      { title: "Charles Hsieh | Fractional VP of Sales & GTM Leadership" },
       {
         name: "description",
         content:
-          "Scale GTM Advisors helps early stage founders build repeatable sales playbooks, recruit sales talent, and plan go-to-market strategy.",
+          "Fractional VP of Sales and GTM leadership for seed to Series B founders.",
       },
-      { name: "author", content: "Scale GTM Advisors" },
-      { property: "og:title", content: "Scale GTM | Sales Strategy for Early Stage Founders" },
+      { name: "author", content: "Charles Hsieh" },
+      { property: "og:title", content: "Charles Hsieh | Fractional VP of Sales & GTM Leadership" },
       {
         property: "og:description",
         content:
-          "Sales coaching, talent recruiting, and strategy planning for early stage startup founders.",
+          "Fractional sales leadership that proves the motion, builds the playbook, and hands it over.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -103,7 +103,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap",
       },
     ],
   }),

@@ -21,7 +21,7 @@ export function Expertise() {
   return (
     <section id="help" className="border-b border-rule">
       <div className="mx-auto max-w-6xl px-6 py-20 md:px-10">
-        <h2 className="section-title">Where I help</h2>
+        <h2 className="eyebrow-muted">Where I help</h2>
         <p className="mt-6 max-w-2xl text-base text-ink-soft">
           I am Charles Hsieh, a four-time revenue leader and founder of Scale GTM. I work with a
           small number of seed to Series B teams at a time so the work stays hands-on.

@@ -21,7 +21,7 @@ export function Logos() {
     <section className="border-b border-rule">
       <div className="mx-auto max-w-6xl px-6 py-14 md:px-10">
         <h2 className="eyebrow-muted">Companies I have worked with</h2>
-        <div className="mt-8 flex flex-wrap items-center gap-x-10 gap-y-8">
+        <div className="mt-8 flex flex-nowrap items-center justify-between gap-6 overflow-x-auto pb-2">
           {logos.map((l) =>
             l.plain ? (
               <img
@@ -29,7 +29,7 @@ export function Logos() {
                 src={l.src}
                 alt={l.alt}
                 loading="lazy"
-                className={`${l.size ?? "h-8"} w-auto mix-blend-multiply grayscale contrast-[2.2] opacity-80`}
+                className={`${l.size ?? "h-8"} w-auto shrink-0 mix-blend-multiply grayscale contrast-[2.2] opacity-80`}
               />
             ) : (
               <img
@@ -37,7 +37,7 @@ export function Logos() {
                 src={l.src}
                 alt={l.alt}
                 loading="lazy"
-                className="h-8 w-auto opacity-70 brightness-0 saturate-0"
+                className="h-8 w-auto shrink-0 opacity-70 brightness-0 saturate-0"
               />
             ),
           )}

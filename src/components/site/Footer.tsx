@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer id="contact" className="bg-paper">
       <div className="mx-auto max-w-6xl px-6 py-20 md:px-10">
-        <h2 className="max-w-xl text-ink">Prove the motion before you hire for it.</h2>
+        <h2 className="max-w-none text-ink">Prove the motion before you hire for it.</h2>
         <div className="mt-8 flex flex-wrap gap-3">
           <a
             href={CALENDLY}

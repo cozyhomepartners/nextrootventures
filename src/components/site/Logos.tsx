@@ -12,7 +12,7 @@ export function Logos() {
   return (
     <section className="border-b border-rule">
       <div className="mx-auto max-w-6xl px-6 py-14 md:px-10">
-        <h2 className="section-title">Companies I have worked with</h2>
+        <h2 className="eyebrow-muted">Companies I have worked with</h2>
         <div className="mt-8 flex flex-wrap items-center gap-x-14 gap-y-8">
           {logos.map((l) => (
             <img

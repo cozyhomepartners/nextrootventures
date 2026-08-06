@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Fractional VP of Sales and GTM leadership for seed to Series B founders.",
+          "Charles Hsieh — fractional VP of Sales for seed to Series B founders. Prove the motion, build the playbook, hire the team, hand it over.",
       },
       { name: "author", content: "Charles Hsieh" },
       { property: "og:title", content: "Charles Hsieh | Fractional VP of Sales & GTM Leadership" },

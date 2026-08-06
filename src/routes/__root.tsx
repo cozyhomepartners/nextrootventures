@@ -84,6 +84,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Charles Hsieh — fractional VP of Sales for seed to Series B founders. Prove the motion, build the playbook, hire the team, hand it over.",
       },
       { name: "author", content: "Charles Hsieh" },
+      {
+        name: "google-site-verification",
+        content: "iUB8KihjwRv3AJHccCoPMzBtATgOYtsqtGG_W-wlMuA",
+      },
       { property: "og:title", content: "Charles Hsieh | Fractional VP of Sales & GTM Leadership" },
       {
         property: "og:description",

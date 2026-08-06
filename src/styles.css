@@ -199,9 +199,19 @@
 
 @utility eyebrow-muted {
   display: block;
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--ink-soft);
+}
+
+@utility section-title {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: clamp(1.875rem, 3.4vw, 2.75rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink);
 }

@@ -1,4 +1,4 @@
-import { CALENDLY, SCALE_GTM } from "./Header";
+import { CALENDLY, LINKEDIN } from "./Header";
 
 export function Footer() {
   return (
@@ -12,15 +12,15 @@ export function Footer() {
             rel="noreferrer"
             className="inline-flex items-center bg-ink px-6 py-3 text-sm font-medium text-paper transition-opacity hover:opacity-90"
           >
-            Book a 30-minute call
+            Free consultation
           </a>
           <a
-            href={SCALE_GTM}
+            href={LINKEDIN}
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center border border-rule px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-ink"
           >
-            Scale GTM ↗
+            LinkedIn ↗
           </a>
         </div>
         <div className="mt-16 flex flex-wrap items-center justify-between gap-4 border-t border-rule pt-6 text-xs tracking-[0.14em] text-ink-soft uppercase">

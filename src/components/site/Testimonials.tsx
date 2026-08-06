@@ -21,7 +21,7 @@ const quotes = [
     quote:
       "Charles has been fundamental to our revenue success. He gave us a detailed playbook for customer calls, coaching structures, and strategy reviews, and helped us hire the right talent.",
     author: "Wilian Iralzabal",
-    role: "Founder",
+    role: "Founder, Zabal Media",
   },
 ];
 
@@ -29,7 +29,7 @@ export function Testimonials() {
   return (
     <section id="customers" className="border-b border-rule">
       <div className="mx-auto max-w-6xl px-6 py-20 md:px-10">
-        <span className="eyebrow-muted">What founders say</span>
+        <h2 className="section-title">What founders say</h2>
         <div className="mt-12 grid gap-x-16 gap-y-12 md:grid-cols-2">
           {quotes.map((q) => (
             <figure key={q.author} className="border-t border-rule pt-5">

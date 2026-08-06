@@ -1,5 +1,5 @@
 import { Mail } from "lucide-react";
-import { CALENDLY, SCALE_GTM } from "./Header";
+import { CALENDLY, LINKEDIN } from "./Header";
 
 export function Hero() {
   return (
@@ -25,15 +25,15 @@ export function Hero() {
             className="inline-flex items-center gap-2 bg-ink px-6 py-3 text-sm font-medium text-paper transition-opacity hover:opacity-90"
           >
             <Mail className="h-4 w-4" />
-            Book a 30-minute call
+            Free consultation
           </a>
           <a
-            href={SCALE_GTM}
+            href={LINKEDIN}
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 border border-rule px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-ink"
           >
-            Scale GTM ↗
+            LinkedIn ↗
           </a>
         </div>
       </div>

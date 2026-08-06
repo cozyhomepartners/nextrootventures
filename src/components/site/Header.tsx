@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 
 export const CALENDLY = "https://calendly.com/charleschsieh/30-minutes";
 export const SCALE_GTM = "https://tryscalegtm.com/";
+export const LINKEDIN = "https://www.linkedin.com/in/charleschsieh/";
 
 const links = [
   { label: "Where I help", href: "#help" },

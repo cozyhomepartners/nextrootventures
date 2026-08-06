@@ -10,7 +10,7 @@ import { Footer } from "@/components/site/Footer";
 
 const title = "Charles Hsieh | Fractional VP of Sales & GTM Leadership";
 const description =
-  "Fractional VP of Sales for seed to Series B founders: prove the motion, build the playbook, hire the team, hand it over.";
+  "Charles Hsieh — fractional VP of Sales for seed to Series B founders. Prove the motion, build the playbook, hire the team, hand it over.";
 
 export const Route = createFileRoute("/")({
   head: () => ({

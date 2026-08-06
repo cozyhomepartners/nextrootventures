@@ -33,7 +33,7 @@ export function Logos() {
                 src={l.src}
                 alt={l.alt}
                 loading="lazy"
-                className="h-8 w-auto mix-blend-multiply grayscale brightness-[0.55] contrast-125"
+                className="h-8 w-auto mix-blend-multiply grayscale contrast-[2.2]"
               />
             ) : (
               <img

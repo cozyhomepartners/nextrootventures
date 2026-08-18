@@ -28,7 +28,7 @@ const quotes = [
 export function Testimonials() {
   return (
     <section id="customers" className="border-b border-rule">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:px-10">
+      <div className="mx-auto max-w-6xl px-6 py-10 md:px-10">
         <h2 className="eyebrow-muted">What founders say</h2>
         <div className="mt-12 grid gap-x-16 gap-y-12 md:grid-cols-2">
           {quotes.map((q) => (

@@ -81,14 +81,15 @@ function Index() {
       <main>
         <Hero />
         <Expertise />
+        <Logos />
+        <Testimonials />
         <Process />
         <Experience />
         <Ventures />
         <About />
-        <Logos />
-        <Testimonials />
       </main>
       <Footer />
     </div>
   );
 }
+

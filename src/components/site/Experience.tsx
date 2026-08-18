@@ -120,7 +120,7 @@ const companies: Company[] = [
 export function Experience() {
   return (
     <section id="experience" className="border-b border-rule">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:px-10">
+      <div className="mx-auto max-w-6xl px-6 py-10 md:px-10">
         <h2 className="eyebrow-muted">Experience</h2>
         <div className="mt-12 space-y-12">
           {companies.map((c) => (

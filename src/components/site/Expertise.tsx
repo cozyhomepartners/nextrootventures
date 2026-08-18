@@ -5,27 +5,25 @@ const tracks = [
   {
     kicker: "Track 01",
     title: "Tech go-to-market consulting",
-    intro:
-      "For seed to Series B founders who need a proven motion before they hire an expensive full-time VP of Sales.",
+    intro: "For seed to Series B founders who need a proven motion before hiring a full-time VP of Sales.",
     items: [
-      "First revenue from zero: ICP, outbound motion, discovery and demo scripts, first reference logos",
-      "Founder-led sales handoff: turn founder instinct into a documented playbook",
-      "Pricing and packaging so deal size and win rate move together",
-      "Hiring and ramping the AEs, SDRs, and leaders who take it over",
-      "Stalled growth reset: pipeline, forecasting, comp, and territory design",
+      "First revenue from zero: ICP, outbound, discovery and demo scripts",
+      "Founder-led sales turned into a documented playbook",
+      "Pricing and packaging that lift deal size and win rate",
+      "Hiring and ramping the AEs, SDRs, and leaders who take over",
+      "Stalled growth reset: pipeline, forecasting, comp, territories",
     ],
   },
   {
     kicker: "Track 02",
     title: "Real estate investing consulting",
-    intro:
-      "For people who want to get started in real estate investing and want a candid, numbers-first walkthrough from an active operator.",
+    intro: "For first-time investors who want a candid, numbers-first walkthrough from an active operator.",
     items: [
-      "Getting to your first deal: goals, budget, and a realistic timeline",
-      "Choosing a market and a property type that fits your life, not a guru's",
-      "Underwriting basics: rent comps, cap rate, cash flow, and what actually breaks a deal",
-      "Financing paths: conventional, DSCR, partnerships, and what lenders look for",
-      "Self-managing vs. property manager, and how to run the first year",
+      "Your first deal: goals, budget, realistic timeline",
+      "Choosing a market and property type that fits your life",
+      "Underwriting: rent comps, cap rate, cash flow, deal breakers",
+      "Financing: conventional, DSCR, partnerships, lender criteria",
+      "Self-managing vs. property manager, and running year one",
     ],
   },
 ];
@@ -64,4 +62,3 @@ export function Expertise() {
     </section>
   );
 }
-

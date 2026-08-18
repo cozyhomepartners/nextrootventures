@@ -1,3 +1,4 @@
+import { GraduationCap } from "lucide-react";
 import blind from "@/assets/co-blind.png";
 import switchboard from "@/assets/co-switchboard.png";
 import google from "@/assets/co-google.png";
@@ -122,13 +123,18 @@ function dateRange(roles: Role[]) {
   const last = roles[roles.length - 1];
   if (!first || !last) return "";
   if (first === last) return first.dates;
-  const lastParts = last.dates.split("–");
-  const firstParts = first.dates.split("–");
+  const lastParts = last.dates.split("\u2013");
+  const firstParts = first.dates.split("\u2013");
   if (lastParts.length < 2 || firstParts.length < 2) return first.dates;
   const start = (lastParts[0] ?? "").trim();
   const end = (firstParts[1] ?? "").trim();
-  return `${start} – ${end}`;
+  return `${start} \u2013 ${end}`;
 }
+
+const education = {
+  school: "University of Illinois Urbana-Champaign",
+  degree: "BS, Electrical & Computer Engineering",
+};
 
 export function Experience() {
   return (
@@ -137,45 +143,35 @@ export function Experience() {
         <h2 className="eyebrow-muted">Experience</h2>
         <div className="mt-10">
           {companies.map((c, i) => (
-            <div
-              key={c.name}
-              className={`relative grid gap-6 md:grid-cols-[140px_1fr] md:gap-10 ${
-                i === companies.length - 1 ? "" : "pb-10"
-              }`}
-            >
-              <div className="relative flex flex-col items-center pt-1">
+            <div key={c.name} className="relative grid gap-4 pb-10 md:grid-cols-[64px_1fr] md:gap-8">
+              <div className="relative flex justify-center">
                 {c.logo && (
-                  <div className="relative z-10 bg-paper p-2">
-                    <img
-                      src={c.logo}
-                      alt=""
-                      className="h-8 w-8 object-contain"
-                      loading="lazy"
-                    />
+                  <div className="relative z-10 flex h-12 w-12 items-center justify-center bg-paper">
+                    <img src={c.logo} alt="" className="h-8 w-8 object-contain" loading="lazy" />
                   </div>
                 )}
-                {i !== companies.length - 1 && (
-                  <div className="absolute top-14 bottom-0 left-1/2 hidden w-px -translate-x-1/2 bg-rule md:block" />
-                )}
-                <p className="relative z-10 mt-3 max-w-[160px] bg-paper text-center text-xs leading-relaxed tracking-[0.12em] text-ink-soft uppercase md:max-w-[120px]">
-                  {dateRange(c.roles)}
-                </p>
+                <div className="absolute top-12 bottom-[-2.5rem] left-1/2 hidden w-px -translate-x-1/2 bg-rule md:block" />
               </div>
               <div>
-                <h3 className="text-ink">{c.name}</h3>
-                <div className="mt-5 space-y-5">
+                <div className="flex min-h-12 flex-wrap items-center gap-x-4 gap-y-1">
+                  <h3 className="text-ink">{c.name}</h3>
+                  <p className="text-xs whitespace-nowrap tracking-[0.14em] text-ink-soft uppercase">
+                    {dateRange(c.roles)}
+                  </p>
+                </div>
+                <div className="mt-3 space-y-5">
                   {c.roles.map((r) => (
                     <div key={r.title}>
                       <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
                         <p className="text-sm font-medium text-ink">{r.title}</p>
-                        <p className="text-xs tracking-[0.14em] text-ink-soft uppercase">
+                        <p className="text-xs whitespace-nowrap tracking-[0.14em] text-ink-soft uppercase">
                           {r.dates}
                         </p>
                       </div>
                       <ul className="mt-2 space-y-1">
                         {r.points.map((p) => (
                           <li key={p} className="flex gap-3 text-sm text-ink-soft">
-                            <span className="text-rust">—</span>
+                            <span className="text-rust">\u2014</span>
                             <span>{p}</span>
                           </li>
                         ))}
@@ -186,6 +182,21 @@ export function Experience() {
               </div>
             </div>
           ))}
+
+          <div className="relative grid gap-4 md:grid-cols-[64px_1fr] md:gap-8">
+            <div className="relative flex justify-center">
+              <div className="relative z-10 flex h-12 w-12 items-center justify-center bg-paper">
+                <GraduationCap className="h-6 w-6 text-ink-soft" />
+              </div>
+            </div>
+            <div>
+              <div className="flex min-h-12 flex-wrap items-center gap-x-4 gap-y-1">
+                <h3 className="text-ink">Education</h3>
+              </div>
+              <p className="mt-1 text-sm font-medium text-ink">{education.school}</p>
+              <p className="mt-1 text-sm text-ink-soft">{education.degree}</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

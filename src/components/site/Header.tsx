@@ -51,15 +51,6 @@ export function Header() {
           ))}
         </nav>
 
-        {false && (
-          <a
-              key={l.label}
-              href={l.href}
-            >
-              x
-          </a>
-        )}
-
         <button
           className="md:hidden"
           aria-label={open ? "Close menu" : "Open menu"}

@@ -7,7 +7,7 @@ export function Hero() {
     <section id="top" className="border-b border-rule">
       <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-8 md:px-10 lg:grid-cols-[1.4fr_0.6fr]">
         <div>
-          <span className="eyebrow">Go-to-market & real estate consulting</span>
+          <span className="eyebrow-muted">Go-to-market & real estate consulting</span>
           <h1 className="mt-4 max-w-[34rem] text-ink">Build revenue. Build roots.</h1>
           <p className="mt-5 max-w-2xl text-lg font-medium text-ink-soft">
             Charles Hsieh's practice: go-to-market leadership for founders, and hands-on coaching for

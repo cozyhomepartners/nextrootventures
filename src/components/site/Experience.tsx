@@ -125,8 +125,8 @@ function dateRange(roles: Role[]) {
   const lastParts = last.dates.split("–");
   const firstParts = first.dates.split("–");
   if (lastParts.length < 2 || firstParts.length < 2) return first.dates;
-  const start = lastParts[0].trim();
-  const end = firstParts[1].trim();
+  const start = (lastParts[0] ?? "").trim();
+  const end = (firstParts[1] ?? "").trim();
   return `${start} – ${end}`;
 }
 

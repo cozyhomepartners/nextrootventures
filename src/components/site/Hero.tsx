@@ -5,7 +5,7 @@ import family from "@/assets/family.jpg.asset.json";
 export function Hero() {
   return (
     <section id="top" className="border-b border-rule">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 pt-24 pb-24 md:px-10 lg:grid-cols-[1.15fr_0.85fr]">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 pt-12 pb-12 md:px-10 lg:grid-cols-[1.15fr_0.85fr]">
         <div>
           <span className="eyebrow">Go-to-market & real estate consulting</span>
           <h1 className="mt-6 max-w-[34rem] text-ink">

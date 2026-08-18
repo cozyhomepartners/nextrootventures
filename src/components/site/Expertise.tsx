@@ -1,3 +1,6 @@
+import { Mail } from "lucide-react";
+import { CALENDLY } from "./Header";
+
 const tracks = [
   {
     kicker: "Track 01",
@@ -23,7 +26,6 @@ const tracks = [
       "Underwriting basics: rent comps, cap rate, cash flow, and what actually breaks a deal",
       "Financing paths: conventional, DSCR, partnerships, and what lenders look for",
       "Self-managing vs. property manager, and how to run the first year",
-      "Tracking P&L and performance so you know if the portfolio is working",
     ],
   },
 ];
@@ -31,13 +33,8 @@ const tracks = [
 export function Expertise() {
   return (
     <section id="services" className="border-b border-rule">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:px-10">
-        <h2 className="eyebrow-muted">Two practices, one operator</h2>
-        <p className="mt-6 max-w-2xl text-base text-ink-soft">
-          I work with a small number of clients at a time so the work stays hands-on — whether that
-          is your first sales playbook or your first rental property.
-        </p>
-        <div className="mt-12 grid gap-12 md:grid-cols-2 md:gap-x-16">
+      <div className="mx-auto max-w-6xl px-6 py-10 md:px-10">
+        <div className="grid gap-12 md:grid-cols-2 md:gap-x-16">
           {tracks.map((t) => (
             <div key={t.title} className="border-t border-rule pt-6">
               <span className="text-xs tracking-[0.18em] text-rust uppercase">{t.kicker}</span>
@@ -51,6 +48,15 @@ export function Expertise() {
                   </li>
                 ))}
               </ul>
+              <a
+                href={CALENDLY}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-8 inline-flex items-center gap-2 bg-ink px-6 py-3 text-sm font-medium text-paper transition-opacity hover:opacity-90"
+              >
+                <Mail className="h-4 w-4" />
+                Free consultation
+              </a>
             </div>
           ))}
         </div>
@@ -58,3 +64,4 @@ export function Expertise() {
     </section>
   );
 }
+

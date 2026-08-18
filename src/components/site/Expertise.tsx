@@ -35,7 +35,7 @@ export function Expertise() {
         <div className="grid gap-12 md:grid-cols-2 md:gap-x-16">
           {tracks.map((t) => (
             <div key={t.title}>
-              <span className="text-xs tracking-[0.18em] text-rust uppercase">{t.kicker}</span>
+              <span className="eyebrow-muted">{t.kicker}</span>
               <h3 className="mt-3 text-ink">{t.title}</h3>
               <p className="mt-3 max-w-lg text-sm text-ink-soft">{t.intro}</p>
               <ul className="mt-6 space-y-3">

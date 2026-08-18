@@ -210,5 +210,15 @@
   section[id],
   footer[id] {
     scroll-margin-top: 4.5rem;
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 }

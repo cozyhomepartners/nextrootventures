@@ -143,16 +143,16 @@ export function Experience() {
         <h2 className="eyebrow-muted">Experience</h2>
         <div className="mt-10">
           {companies.map((c) => (
-            <div key={c.name} className="relative grid gap-4 pb-10 md:grid-cols-[80px_1fr] md:gap-8">
+            <div key={c.name} className="relative grid gap-4 pb-10 md:grid-cols-[64px_1fr] md:gap-8">
               <div className="relative flex justify-center">
                 {c.logo && (
-                  <div className="relative z-10 flex h-16 w-16 items-center justify-center bg-paper">
-                    <img src={c.logo} alt="" className="h-14 w-14 object-contain" loading="lazy" />
+                    <div className="relative z-10 flex h-12 w-12 items-center justify-center bg-paper">
+                      <img src={c.logo} alt="" className="h-10 w-10 object-contain" loading="lazy" />
                   </div>
                 )}
               </div>
               <div>
-                <div className="flex min-h-16 flex-wrap items-center gap-x-6 gap-y-1">
+                <div className="flex min-h-12 flex-wrap items-center gap-x-6 gap-y-1">
                   <h3 className="text-ink">{c.name}</h3>
                 </div>
                 <div className="mt-3 space-y-5">
@@ -185,14 +185,14 @@ export function Experience() {
               {education.entries.map((e) => (
                 <div
                   key={e.school}
-                  className="grid gap-4 pb-6 md:grid-cols-[80px_1fr] md:gap-8"
+                  className="grid gap-4 pb-6 md:grid-cols-[64px_1fr] md:gap-8"
                 >
                   <div className="flex justify-center">
-                    <div className="flex h-16 w-16 items-center justify-center bg-paper">
-                      <img src={e.logo} alt="" className="h-14 w-14 object-contain" loading="lazy" />
+                    <div className="flex h-12 w-12 items-center justify-center bg-paper">
+                      <img src={e.logo} alt="" className="h-10 w-10 object-contain" loading="lazy" />
                     </div>
                   </div>
-                  <div className="flex min-h-16 flex-wrap items-center justify-between gap-x-6 gap-y-1">
+                  <div className="flex min-h-12 flex-wrap items-center justify-between gap-x-6 gap-y-1">
                     <div>
                       <p className="text-sm font-semibold text-ink">{e.school}</p>
                       <p className="mt-1 text-sm text-ink-soft">{e.detail}</p>

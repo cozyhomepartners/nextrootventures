@@ -18,7 +18,7 @@ const logos = [
 
 export function Logos() {
   return (
-    <section className="border-b border-rule">
+    <section id="companies" className="border-b border-rule">
       <div className="mx-auto max-w-6xl px-6 py-7 md:px-10">
         <h2 className="eyebrow-muted">Companies I have worked with</h2>
         <div className="mt-8 flex flex-nowrap items-center justify-between gap-6 overflow-x-auto pb-2">

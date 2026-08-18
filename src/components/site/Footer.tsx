@@ -5,7 +5,7 @@ export function Footer() {
     <footer id="contact" className="bg-paper">
       <div className="mx-auto max-w-6xl px-6 py-10 md:px-10">
         <h2 className="max-w-none text-ink">Let's figure out your next move.</h2>
-        <p className="mt-4 max-w-2xl text-base text-ink-soft">
+        <p className="mt-4 max-w-none text-base text-ink-soft">
           Whether it is your first sales playbook or your first rental property, start with a free
           consultation.
         </p>

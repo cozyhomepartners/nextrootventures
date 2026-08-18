@@ -77,22 +77,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Charles Hsieh | Fractional VP of Sales & GTM Leadership" },
+      { title: "NextRoots Ventures | GTM & Real Estate Investing Consulting" },
       {
         name: "description",
         content:
-          "Charles Hsieh — fractional VP of Sales for seed to Series B founders. Prove the motion, build the playbook, hire the team, hand it over.",
+          "NextRoots Ventures — Charles Hsieh's consulting practice: go-to-market leadership for founders and hands-on guidance for new real estate investors.",
       },
       { name: "author", content: "Charles Hsieh" },
+      { property: "og:site_name", content: "NextRoots Ventures" },
       {
         name: "google-site-verification",
         content: "iUB8KihjwRv3AJHccCoPMzBtATgOYtsqtGG_W-wlMuA",
       },
-      { property: "og:title", content: "Charles Hsieh | Fractional VP of Sales & GTM Leadership" },
+      { property: "og:title", content: "NextRoots Ventures | GTM & Real Estate Investing Consulting" },
       {
         property: "og:description",
         content:
-          "Fractional sales leadership that proves the motion, builds the playbook, and hands it over.",
+          "Go-to-market consulting for founders and real estate investing guidance from an active operator.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

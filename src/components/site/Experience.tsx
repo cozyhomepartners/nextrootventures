@@ -155,9 +155,9 @@ export function Experience() {
                   </div>
                 )}
                 {i !== companies.length - 1 && (
-                  <div className="absolute top-14 bottom-0 left-1/2 w-px -translate-x-1/2 bg-rule" />
+                  <div className="absolute top-14 bottom-0 left-1/2 hidden w-px -translate-x-1/2 bg-rule md:block" />
                 )}
-                <p className="mt-3 max-w-[120px] text-center text-xs leading-relaxed tracking-[0.12em] text-ink-soft uppercase">
+                <p className="relative z-10 mt-3 max-w-[160px] bg-paper text-center text-xs leading-relaxed tracking-[0.12em] text-ink-soft uppercase md:max-w-[120px]">
                   {dateRange(c.roles)}
                 </p>
               </div>

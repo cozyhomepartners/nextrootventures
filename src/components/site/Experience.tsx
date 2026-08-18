@@ -144,7 +144,7 @@ export function Experience() {
         <div className="mt-10">
           {companies.map((c) => (
             <div key={c.name} className="relative grid gap-4 pb-10 md:grid-cols-[64px_1fr] md:gap-8">
-              <div className="relative flex justify-center">
+              <div className="relative flex justify-start md:justify-center">
                 {c.logo && (
                     <div className="relative z-10 flex h-12 w-12 items-center justify-center bg-paper">
                       <img src={c.logo} alt="" className="h-10 w-10 object-contain" loading="lazy" />
@@ -158,9 +158,9 @@ export function Experience() {
                 <div className="mt-3 space-y-5">
                   {c.roles.map((r) => (
                     <div key={r.title}>
-                      <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
+                      <div className="flex flex-col items-start gap-y-0.5 sm:flex-row sm:flex-wrap sm:items-baseline sm:justify-between sm:gap-x-6 sm:gap-y-1">
                         <p className="text-sm font-medium text-ink">{r.title}</p>
-                        <p className="ml-auto text-xs whitespace-nowrap tracking-[0.14em] text-ink-soft uppercase">
+                        <p className="text-xs whitespace-nowrap tracking-[0.14em] text-ink-soft uppercase sm:ml-auto">
                           {r.dates}
                         </p>
                       </div>
@@ -187,17 +187,17 @@ export function Experience() {
                   key={e.school}
                   className="grid gap-4 pb-6 md:grid-cols-[64px_1fr] md:gap-8"
                 >
-                  <div className="flex justify-center">
+                  <div className="flex justify-start md:justify-center">
                     <div className="flex h-12 w-12 items-center justify-center bg-paper">
                       <img src={e.logo} alt="" className="h-10 w-10 object-contain" loading="lazy" />
                     </div>
                   </div>
-                  <div className="flex min-h-12 flex-wrap items-center justify-between gap-x-6 gap-y-1">
+                  <div className="flex min-h-12 flex-col items-start gap-y-1 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-x-6">
                     <div>
                       <p className="text-sm font-semibold text-ink">{e.school}</p>
                       <p className="mt-1 text-sm text-ink-soft">{e.detail}</p>
                     </div>
-                    <p className="ml-auto text-xs whitespace-nowrap tracking-[0.14em] text-ink-soft uppercase">
+                    <p className="text-xs whitespace-nowrap tracking-[0.14em] text-ink-soft uppercase sm:ml-auto">
                       {e.dates}
                     </p>
                   </div>

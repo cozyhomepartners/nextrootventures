@@ -7,7 +7,8 @@ export const LINKEDIN = "https://www.linkedin.com/in/charleschsieh/";
 const links = [
   { label: "Services", href: "#services" },
   { label: "Experience", href: "#experience" },
-  { label: "Ventures", href: "#ventures" },
+  { label: "Roofolio", href: "https://roofolio.ai/", external: true },
+  { label: "Cozy Home", href: "https://www.cozyhomepartners.com/", external: true },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -32,21 +33,16 @@ export function Header() {
         <nav className="hidden items-center gap-8 md:flex">
           {links.map((l) => (
             <a
-              key={l.href}
+              key={l.label}
               href={l.href}
+              target={l.external ? "_blank" : undefined}
+              rel={l.external ? "noreferrer" : undefined}
               className="text-sm text-ink-soft transition-colors hover:text-ink"
             >
               {l.label}
+              {l.external ? " ↗" : ""}
             </a>
           ))}
-          <a
-            href={CALENDLY}
-            target="_blank"
-            rel="noreferrer"
-            className="text-sm font-medium text-ink underline decoration-rust decoration-2 underline-offset-4"
-          >
-            Free consultation ↗
-          </a>
         </nav>
 
         <button
@@ -62,17 +58,19 @@ export function Header() {
         <nav className="border-t border-rule px-6 py-4 md:hidden">
           <ul className="space-y-3">
             {links.map((l) => (
-              <li key={l.href}>
-                <a href={l.href} onClick={() => setOpen(false)} className="text-sm text-ink-soft">
+              <li key={l.label}>
+                <a
+                  href={l.href}
+                  target={l.external ? "_blank" : undefined}
+                  rel={l.external ? "noreferrer" : undefined}
+                  onClick={l.external ? undefined : () => setOpen(false)}
+                  className="text-sm text-ink-soft"
+                >
                   {l.label}
+                  {l.external ? " ↗" : ""}
                 </a>
               </li>
             ))}
-            <li>
-              <a href={CALENDLY} target="_blank" rel="noreferrer" className="text-sm font-medium text-ink">
-                Free consultation ↗
-              </a>
-            </li>
           </ul>
         </nav>
       )}

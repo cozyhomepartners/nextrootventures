@@ -117,44 +117,66 @@ const companies: Company[] = [
   },
 ];
 
+function dateRange(roles: Role[]) {
+  if (roles.length === 1) return roles[0].dates;
+  const start = roles[roles.length - 1].dates.split("–")[0].trim();
+  const end = roles[0].dates.split("–")[1].trim();
+  return `${start} – ${end}`;
+}
+
 export function Experience() {
   return (
     <section id="experience" className="border-b border-rule">
       <div className="mx-auto max-w-6xl px-6 py-10 md:px-10">
         <h2 className="eyebrow-muted">Experience</h2>
-        <div className="mt-12 space-y-12">
-          {companies.map((c) => (
-            <div key={c.name} className="border-t border-rule pt-6">
-              <div className="flex items-center gap-3">
+        <div className="mt-10">
+          {companies.map((c, i) => (
+            <div
+              key={c.name}
+              className={`relative grid gap-6 md:grid-cols-[140px_1fr] md:gap-10 ${
+                i === companies.length - 1 ? "" : "pb-10"
+              }`}
+            >
+              <div className="relative flex flex-col items-center pt-1">
                 {c.logo && (
-                  <img
-                    src={c.logo}
-                    alt=""
-                    className="h-6 w-6 object-contain grayscale"
-                    loading="lazy"
-                  />
-                )}
-                <h3 className="text-ink">{c.name}</h3>
-              </div>
-              <div className="mt-6 space-y-6">
-                {c.roles.map((r) => (
-                  <div key={r.title} className="md:grid md:grid-cols-[1fr_2fr] md:gap-10">
-                    <div>
-                      <p className="text-sm font-medium text-ink">{r.title}</p>
-                      <p className="mt-1 text-xs tracking-[0.14em] text-ink-soft uppercase">
-                        {r.dates}
-                      </p>
-                    </div>
-                    <ul className="mt-3 space-y-2 md:mt-0">
-                      {r.points.map((p) => (
-                        <li key={p} className="flex gap-3 text-sm text-ink-soft">
-                          <span className="text-rust">—</span>
-                          <span>{p}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="relative z-10 bg-paper p-2">
+                    <img
+                      src={c.logo}
+                      alt=""
+                      className="h-8 w-8 object-contain"
+                      loading="lazy"
+                    />
                   </div>
-                ))}
+                )}
+                {i !== companies.length - 1 && (
+                  <div className="absolute top-14 bottom-0 left-1/2 w-px -translate-x-1/2 bg-rule" />
+                )}
+                <p className="mt-3 max-w-[120px] text-center text-xs leading-relaxed tracking-[0.12em] text-ink-soft uppercase">
+                  {dateRange(c.roles)}
+                </p>
+              </div>
+              <div>
+                <h3 className="text-ink">{c.name}</h3>
+                <div className="mt-5 space-y-5">
+                  {c.roles.map((r) => (
+                    <div key={r.title}>
+                      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                        <p className="text-sm font-medium text-ink">{r.title}</p>
+                        <p className="text-xs tracking-[0.14em] text-ink-soft uppercase">
+                          {r.dates}
+                        </p>
+                      </div>
+                      <ul className="mt-2 space-y-1">
+                        {r.points.map((p) => (
+                          <li key={p} className="flex gap-3 text-sm text-ink-soft">
+                            <span className="text-rust">—</span>
+                            <span>{p}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           ))}

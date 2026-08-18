@@ -1,10 +1,14 @@
-import { CALENDLY, LINKEDIN } from "./Header";
+import { CALENDLY, LINKEDIN, Wordmark } from "./Header";
 
 export function Footer() {
   return (
     <footer id="contact" className="bg-paper">
       <div className="mx-auto max-w-6xl px-6 py-20 md:px-10">
-        <h2 className="max-w-none text-ink">Prove the motion before you hire for it.</h2>
+        <h2 className="max-w-none text-ink">Let's figure out your next move.</h2>
+        <p className="mt-4 max-w-2xl text-base text-ink-soft">
+          Whether it is your first sales playbook or your first rental property, start with a free
+          consultation.
+        </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <a
             href={CALENDLY}
@@ -24,13 +28,9 @@ export function Footer() {
           </a>
         </div>
         <div className="mt-16 flex flex-wrap items-center justify-between gap-4 border-t border-rule pt-6 text-xs tracking-[0.14em] text-ink-soft uppercase">
+          <Wordmark className="text-ink" />
           <span>Charles Hsieh — San Francisco, CA</span>
-          <a
-            href="https://www.linkedin.com/in/charleschsieh/"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-ink"
-          >
+          <a href={LINKEDIN} target="_blank" rel="noreferrer" className="hover:text-ink">
             LinkedIn ↗
           </a>
           <span>© {new Date().getFullYear()}</span>

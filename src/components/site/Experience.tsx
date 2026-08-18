@@ -195,7 +195,7 @@ export function Experience() {
                     </div>
                   </div>
                   <div className="flex flex-col items-start gap-y-1 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-x-6">
-                    <div className="flex items-start gap-4 sm:items-center sm:gap-0">
+                    <div className="flex items-center gap-4 sm:items-center sm:gap-0">
                       <div className="flex h-12 w-12 shrink-0 items-center justify-center bg-paper md:hidden">
                         <img src={e.logo} alt="" className="h-10 w-10 object-contain" loading="lazy" />
                       </div>

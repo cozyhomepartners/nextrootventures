@@ -9,7 +9,7 @@ const links = [
   { label: "Services", href: "#services" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "Experience", href: "#experience" },
-  { label: "Roofolio", href: "https://roofolio.ai/", external: true },
+  { label: "Roofolio", href: "https://roofolio.ai/", external: true, divider: true },
   { label: "Cozy Home", href: "https://www.cozyhomepartners.com/", external: true },
 ];
 
@@ -36,16 +36,18 @@ export function Header() {
 
         <nav className="hidden items-center gap-8 md:flex">
           {links.map((l) => (
-            <a
-              key={l.label}
-              href={l.href}
-              target={l.external ? "_blank" : undefined}
-              rel={l.external ? "noreferrer" : undefined}
-              className="text-sm text-ink-soft transition-colors hover:text-ink"
-            >
-              {l.label}
-              {l.external ? " ↗" : ""}
-            </a>
+            <span key={l.label} className="flex items-center gap-8">
+              {l.divider && <span aria-hidden className="h-4 w-px bg-rule" />}
+              <a
+                href={l.href}
+                target={l.external ? "_blank" : undefined}
+                rel={l.external ? "noreferrer" : undefined}
+                className="text-sm text-ink-soft transition-colors hover:text-ink"
+              >
+                {l.label}
+                {l.external ? " ↗" : ""}
+              </a>
+            </span>
           ))}
         </nav>
 

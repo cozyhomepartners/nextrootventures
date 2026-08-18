@@ -118,9 +118,15 @@ const companies: Company[] = [
 ];
 
 function dateRange(roles: Role[]) {
-  if (roles.length === 1) return roles[0].dates;
-  const start = roles[roles.length - 1].dates.split("–")[0].trim();
-  const end = roles[0].dates.split("–")[1].trim();
+  const first = roles[0];
+  const last = roles[roles.length - 1];
+  if (!first || !last) return "";
+  if (first === last) return first.dates;
+  const lastParts = last.dates.split("–");
+  const firstParts = first.dates.split("–");
+  if (lastParts.length < 2 || firstParts.length < 2) return first.dates;
+  const start = lastParts[0].trim();
+  const end = firstParts[1].trim();
   return `${start} – ${end}`;
 }
 

@@ -7,7 +7,8 @@ export const LINKEDIN = "https://www.linkedin.com/in/charleschsieh/";
 const links = [
   { label: "Services", href: "#services" },
   { label: "Experience", href: "#experience" },
-  { label: "Ventures", href: "#ventures" },
+  { label: "Roofolio", href: "https://roofolio.ai/", external: true },
+  { label: "Cozy Home", href: "https://www.cozyhomepartners.com/", external: true },
   { label: "Contact", href: "#contact" },
 ];
 

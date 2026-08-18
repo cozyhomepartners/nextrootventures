@@ -171,7 +171,7 @@ export function Experience() {
                       <ul className="mt-2 space-y-1">
                         {r.points.map((p) => (
                           <li key={p} className="flex gap-3 text-sm text-ink-soft">
-                            <span className="text-rust">\u2014</span>
+                            <span className="text-rust">—</span>
                             <span>{p}</span>
                           </li>
                         ))}

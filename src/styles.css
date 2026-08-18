@@ -205,3 +205,10 @@
   text-transform: uppercase;
   color: var(--rust);
 }
+
+@layer base {
+  section[id],
+  footer[id] {
+    scroll-margin-top: 4.5rem;
+  }
+}

@@ -1,22 +1,26 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/nextroot-logo.svg";
 
 export const CALENDLY = "https://calendly.com/charleschsieh/30-minutes";
 export const LINKEDIN = "https://www.linkedin.com/in/charleschsieh/";
 
 const links = [
   { label: "Services", href: "#services" },
+  { label: "Testimonials", href: "#testimonials" },
   { label: "Experience", href: "#experience" },
   { label: "Roofolio", href: "https://roofolio.ai/", external: true },
   { label: "Cozy Home", href: "https://www.cozyhomepartners.com/", external: true },
-  { label: "Contact", href: "#contact" },
 ];
 
 export function Wordmark({ className = "" }: { className?: string }) {
   return (
-    <span className={`font-semibold tracking-[-0.01em] ${className}`}>
-      NextRoots<span className="text-rust"> Ventures</span>
-    </span>
+    <img
+      src={logo}
+      alt="NextRoot Ventures"
+      className={`w-auto ${className}`}
+      loading="eager"
+    />
   );
 }
 
@@ -26,8 +30,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-rule bg-paper/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10">
-        <a href="#top" aria-label="NextRoots Ventures">
-          <Wordmark className="text-base text-ink md:text-lg" />
+        <a href="#top" aria-label="NextRoot Ventures">
+          <Wordmark className="h-6 md:h-7" />
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">

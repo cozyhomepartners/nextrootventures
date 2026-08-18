@@ -5,13 +5,12 @@ import { Expertise } from "@/components/site/Expertise";
 import { Process } from "@/components/site/Process";
 import { Experience } from "@/components/site/Experience";
 import { About } from "@/components/site/About";
-import { Logos } from "@/components/site/Logos";
 import { Testimonials } from "@/components/site/Testimonials";
 import { Footer } from "@/components/site/Footer";
 
-const title = "NextRoots Ventures | GTM & Real Estate Investing Consulting";
+const title = "NextRoot Ventures | GTM & Real Estate Investing Consulting";
 const description =
-  "NextRoots Ventures — Charles Hsieh's consulting practice: fractional go-to-market leadership for founders and hands-on guidance for new real estate investors.";
+  "NextRoot Ventures — Charles Hsieh's consulting practice: fractional go-to-market leadership for founders and hands-on guidance for new real estate investors.";
 const url = "https://tryscalegtm.com/";
 
 export const Route = createFileRoute("/")({
@@ -32,10 +31,10 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@graph": [
-            { "@type": "WebSite", name: "NextRoots Ventures", url },
+            { "@type": "WebSite", name: "NextRoot Ventures", url },
             {
               "@type": "Organization",
-              name: "NextRoots Ventures",
+              name: "NextRoot Ventures",
               url,
               description,
               founder: { "@type": "Person", name: "Charles Hsieh" },
@@ -43,7 +42,7 @@ export const Route = createFileRoute("/")({
             {
               "@type": "Person",
               name: "Charles Hsieh",
-              jobTitle: "Founder, NextRoots Ventures",
+              jobTitle: "Founder, NextRoot Ventures",
               url,
               sameAs: ["https://www.linkedin.com/in/charleschsieh/", "https://charleshsieh.com/"],
             },
@@ -53,7 +52,7 @@ export const Route = createFileRoute("/")({
               serviceType: "Fractional sales and GTM leadership",
               description:
                 "V1 GTM playbooks, pricing and packaging, founder-led sales handoff, and first sales hires for seed to Series B founders.",
-              provider: { "@type": "Organization", name: "NextRoots Ventures" },
+              provider: { "@type": "Organization", name: "NextRoot Ventures" },
               areaServed: "US",
             },
             {
@@ -62,7 +61,7 @@ export const Route = createFileRoute("/")({
               serviceType: "Real estate investing advisory",
               description:
                 "How to get started in real estate investing: market selection, underwriting, financing, management, and portfolio P&L tracking.",
-              provider: { "@type": "Organization", name: "NextRoots Ventures" },
+              provider: { "@type": "Organization", name: "NextRoot Ventures" },
               areaServed: "US",
             },
           ],
@@ -80,9 +79,8 @@ function Index() {
       <main>
         <Hero />
         <Expertise />
-        <Logos />
-        <Testimonials />
         <Process />
+        <Testimonials />
         <Experience />
         <About />
       </main>

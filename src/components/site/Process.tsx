@@ -2,22 +2,22 @@ const steps = [
   {
     n: "01",
     title: "Diagnostic",
-    body: "A working session or two inside the real numbers — your funnel and calls, or your budget and target market. You get a written assessment and a prioritized plan.",
+    body: "Working sessions inside the real numbers, ending in a written assessment and a prioritized plan.",
   },
   {
     n: "02",
     title: "Build",
-    body: "We install the plan: motion, pricing, and metrics for GTM; market, criteria, and underwriting model for real estate.",
+    body: "We install the plan: motion, pricing, and metrics — or market, criteria, and underwriting model.",
   },
   {
     n: "03",
     title: "Execute together",
-    body: "Live coaching through the hard parts — the first hires and deals, or the first offers, inspections, and tenants.",
+    body: "Live coaching through the hard parts: first hires and deals, first offers and tenants.",
   },
   {
     n: "04",
     title: "Hand off",
-    body: "A documented playbook and the confidence to run it without me. The goal is to make the role unnecessary.",
+    body: "A documented playbook you can run without me.",
   },
 ];
 
@@ -26,7 +26,7 @@ export function Process() {
     <section id="engagement" className="border-b border-rule">
       <div className="mx-auto max-w-6xl px-6 py-10 md:px-10">
         <h2 className="eyebrow-muted">How an engagement runs</h2>
-        <ol className="mt-12 grid gap-10 md:grid-cols-4">
+        <ol className="mt-10 grid gap-10 md:grid-cols-4">
           {steps.map((s) => (
             <li key={s.n} className="border-t border-rule pt-4">
               <span className="text-xs tracking-[0.18em] text-rust">{s.n}</span>

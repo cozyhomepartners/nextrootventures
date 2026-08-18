@@ -3,14 +3,17 @@ import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
 import { Expertise } from "@/components/site/Expertise";
 import { Process } from "@/components/site/Process";
+import { Experience } from "@/components/site/Experience";
+import { Ventures } from "@/components/site/Ventures";
 import { About } from "@/components/site/About";
 import { Logos } from "@/components/site/Logos";
 import { Testimonials } from "@/components/site/Testimonials";
 import { Footer } from "@/components/site/Footer";
 
-const title = "Charles Hsieh | Fractional VP of Sales & GTM Leadership";
+const title = "NextRoots Ventures | GTM & Real Estate Investing Consulting";
 const description =
-  "Charles Hsieh — fractional VP of Sales for seed to Series B founders. Prove the motion, build the playbook, hire the team, hand it over.";
+  "NextRoots Ventures — Charles Hsieh's consulting practice: fractional go-to-market leadership for founders and hands-on guidance for new real estate investors.";
+const url = "https://tryscalegtm.com/";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -19,36 +22,48 @@ export const Route = createFileRoute("/")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
+      { property: "og:url", content: url },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://tryscalegtm.com/" }],
+    links: [{ rel: "canonical", href: url }],
     scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@graph": [
+            { "@type": "WebSite", name: "NextRoots Ventures", url },
             {
-              "@type": "WebSite",
-              name: title,
-              url: "https://tryscalegtm.com/",
+              "@type": "Organization",
+              name: "NextRoots Ventures",
+              url,
+              description,
+              founder: { "@type": "Person", name: "Charles Hsieh" },
             },
             {
               "@type": "Person",
               name: "Charles Hsieh",
-              jobTitle: "Fractional VP of Sales",
-              url: "https://tryscalegtm.com/",
-              description,
-              sameAs: ["https://www.linkedin.com/in/charleschsieh/"],
+              jobTitle: "Founder, NextRoots Ventures",
+              url,
+              sameAs: ["https://www.linkedin.com/in/charleschsieh/", "https://charleshsieh.com/"],
             },
             {
               "@type": "Service",
-              name: "Fractional VP of Sales & GTM Leadership",
-              serviceType: "Fractional sales leadership",
+              name: "Tech go-to-market consulting",
+              serviceType: "Fractional sales and GTM leadership",
               description:
-                "Fractional VP of Sales and GTM leadership for seed to Series B founders: prove the motion, build the playbook, hire the team, hand it over.",
-              provider: { "@type": "Person", name: "Charles Hsieh" },
+                "V1 GTM playbooks, pricing and packaging, founder-led sales handoff, and first sales hires for seed to Series B founders.",
+              provider: { "@type": "Organization", name: "NextRoots Ventures" },
+              areaServed: "US",
+            },
+            {
+              "@type": "Service",
+              name: "Real estate investing consulting",
+              serviceType: "Real estate investing advisory",
+              description:
+                "How to get started in real estate investing: market selection, underwriting, financing, management, and portfolio P&L tracking.",
+              provider: { "@type": "Organization", name: "NextRoots Ventures" },
               areaServed: "US",
             },
           ],
@@ -67,6 +82,8 @@ function Index() {
         <Hero />
         <Expertise />
         <Process />
+        <Experience />
+        <Ventures />
         <About />
         <Logos />
         <Testimonials />

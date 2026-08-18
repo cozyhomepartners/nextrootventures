@@ -2,22 +2,22 @@ const steps = [
   {
     n: "01",
     title: "Diagnostic",
-    body: "Two weeks inside your funnel, calls, and data. You get a written assessment and a prioritized plan.",
+    body: "A working session or two inside the real numbers — your funnel and calls, or your budget and target market. You get a written assessment and a prioritized plan.",
   },
   {
     n: "02",
     title: "Build",
-    body: "We install the motion: ICP, messaging, pipeline process, pricing, and the metrics that govern them.",
+    body: "We install the plan: motion, pricing, and metrics for GTM; market, criteria, and underwriting model for real estate.",
   },
   {
     n: "03",
-    title: "Hire and ramp",
-    body: "Scorecards, interview loops, onboarding, and coaching for the reps and leaders who take it over.",
+    title: "Execute together",
+    body: "Live coaching through the hard parts — the first hires and deals, or the first offers, inspections, and tenants.",
   },
   {
     n: "04",
     title: "Hand off",
-    body: "Documented playbook and a full-time leader in seat. The goal is to make the role unnecessary.",
+    body: "A documented playbook and the confidence to run it without me. The goal is to make the role unnecessary.",
   },
 ];
 

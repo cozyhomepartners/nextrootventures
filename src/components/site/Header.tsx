@@ -1,17 +1,23 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import scaleGtmLogo from "@/assets/scalegtm-logo.svg";
 
 export const CALENDLY = "https://calendly.com/charleschsieh/30-minutes";
-export const SCALE_GTM = "https://tryscalegtm.com/";
 export const LINKEDIN = "https://www.linkedin.com/in/charleschsieh/";
 
 const links = [
-  { label: "Where I help", href: "#help" },
-  { label: "Engagement", href: "#engagement" },
-  { label: "Track record", href: "#track-record" },
-  { label: "Customers", href: "#customers" },
+  { label: "Services", href: "#services" },
+  { label: "Experience", href: "#experience" },
+  { label: "Ventures", href: "#ventures" },
+  { label: "Contact", href: "#contact" },
 ];
+
+export function Wordmark({ className = "" }: { className?: string }) {
+  return (
+    <span className={`font-semibold tracking-[-0.01em] ${className}`}>
+      NextRoots<span className="text-rust"> Ventures</span>
+    </span>
+  );
+}
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -19,8 +25,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-rule bg-paper/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10">
-        <a href={SCALE_GTM} target="_blank" rel="noreferrer" aria-label="Scale GTM">
-          <img src={scaleGtmLogo} alt="Scale GTM" className="h-5 w-auto" />
+        <a href="#top" aria-label="NextRoots Ventures">
+          <Wordmark className="text-base text-ink md:text-lg" />
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -39,7 +45,7 @@ export function Header() {
             rel="noreferrer"
             className="text-sm font-medium text-ink underline decoration-rust decoration-2 underline-offset-4"
           >
-            Book a call ↗
+            Free consultation ↗
           </a>
         </nav>
 
@@ -57,18 +63,14 @@ export function Header() {
           <ul className="space-y-3">
             {links.map((l) => (
               <li key={l.href}>
-                <a
-                  href={l.href}
-                  onClick={() => setOpen(false)}
-                  className="text-sm text-ink-soft"
-                >
+                <a href={l.href} onClick={() => setOpen(false)} className="text-sm text-ink-soft">
                   {l.label}
                 </a>
               </li>
             ))}
             <li>
               <a href={CALENDLY} target="_blank" rel="noreferrer" className="text-sm font-medium text-ink">
-                Book a call ↗
+                Free consultation ↗
               </a>
             </li>
           </ul>

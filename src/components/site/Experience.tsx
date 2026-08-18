@@ -13,7 +13,7 @@ type Company = { name: string; logo?: string; roles: Role[] };
 
 const companies: Company[] = [
   {
-    name: "Blind — anonymous professional network (15M+ users)",
+    name: "Blind",
     logo: blind,
     roles: [
       {
@@ -143,16 +143,21 @@ export function Experience() {
         <h2 className="eyebrow-muted">Experience</h2>
         <div className="mt-10">
           {companies.map((c) => (
-            <div key={c.name} className="relative grid gap-4 pb-10 md:grid-cols-[64px_1fr] md:gap-8">
-              <div className="relative flex justify-start md:justify-center">
+            <div key={c.name} className="pb-10 md:grid md:grid-cols-[64px_1fr] md:gap-8">
+              <div className="hidden md:flex md:justify-center">
                 {c.logo && (
-                    <div className="relative z-10 flex h-12 w-12 items-center justify-center bg-paper">
-                      <img src={c.logo} alt="" className="h-10 w-10 object-contain" loading="lazy" />
+                  <div className="flex h-12 w-12 items-center justify-center bg-paper">
+                    <img src={c.logo} alt="" className="h-10 w-10 object-contain" loading="lazy" />
                   </div>
                 )}
               </div>
               <div>
-                <div className="flex min-h-12 flex-wrap items-center gap-x-6 gap-y-1">
+                <div className="flex items-start gap-4 md:items-center md:gap-0">
+                  {c.logo && (
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center bg-paper md:hidden">
+                      <img src={c.logo} alt="" className="h-10 w-10 object-contain" loading="lazy" />
+                    </div>
+                  )}
                   <h3 className="text-ink">{c.name}</h3>
                 </div>
                 <div className="mt-3 space-y-5">
@@ -183,19 +188,21 @@ export function Experience() {
             <h3 className="eyebrow-muted">Education</h3>
             <div className="mt-6">
               {education.entries.map((e) => (
-                <div
-                  key={e.school}
-                  className="grid gap-4 pb-6 md:grid-cols-[64px_1fr] md:gap-8"
-                >
-                  <div className="flex justify-start md:justify-center">
+                <div key={e.school} className="pb-6 md:grid md:grid-cols-[64px_1fr] md:gap-8">
+                  <div className="hidden md:flex md:justify-center">
                     <div className="flex h-12 w-12 items-center justify-center bg-paper">
                       <img src={e.logo} alt="" className="h-10 w-10 object-contain" loading="lazy" />
                     </div>
                   </div>
-                  <div className="flex min-h-12 flex-col items-start gap-y-1 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-x-6">
-                    <div>
-                      <p className="text-sm font-semibold text-ink">{e.school}</p>
-                      <p className="mt-1 text-sm text-ink-soft">{e.detail}</p>
+                  <div className="flex flex-col items-start gap-y-1 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-x-6">
+                    <div className="flex items-start gap-4 sm:items-center sm:gap-0">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center bg-paper md:hidden">
+                        <img src={e.logo} alt="" className="h-10 w-10 object-contain" loading="lazy" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold text-ink">{e.school}</p>
+                        <p className="mt-1 text-sm text-ink-soft">{e.detail}</p>
+                      </div>
                     </div>
                     <p className="text-xs whitespace-nowrap tracking-[0.14em] text-ink-soft uppercase sm:ml-auto">
                       {e.dates}

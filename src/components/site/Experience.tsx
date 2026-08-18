@@ -1,4 +1,3 @@
-import { GraduationCap } from "lucide-react";
 import blind from "@/assets/co-blind.png";
 import switchboard from "@/assets/co-switchboard.png";
 import google from "@/assets/co-google.png";
@@ -132,8 +131,18 @@ function dateRange(roles: Role[]) {
 }
 
 const education = {
-  school: "University of Illinois Urbana-Champaign",
-  degree: "BS, Electrical & Computer Engineering",
+  entries: [
+    {
+      school: "University of Illinois at Urbana-Champaign",
+      detail: "B.S. Electrical and Computer Engineering, Minor in Computer Science",
+      dates: "Class of 2006",
+    },
+    {
+      school: "Tsinghua University",
+      detail: "Chinese language and culture program",
+      dates: "Summer 2006",
+    },
+  ],
 };
 
 export function Experience() {
@@ -142,7 +151,7 @@ export function Experience() {
       <div className="mx-auto max-w-6xl px-6 py-10 md:px-10">
         <h2 className="eyebrow-muted">Experience</h2>
         <div className="mt-10">
-          {companies.map((c, i) => (
+          {companies.map((c) => (
             <div key={c.name} className="relative grid gap-4 pb-10 md:grid-cols-[64px_1fr] md:gap-8">
               <div className="relative flex justify-center">
                 {c.logo && (
@@ -150,21 +159,20 @@ export function Experience() {
                     <img src={c.logo} alt="" className="h-8 w-8 object-contain" loading="lazy" />
                   </div>
                 )}
-                <div className="absolute top-12 bottom-[-2.5rem] left-1/2 hidden w-px -translate-x-1/2 bg-rule md:block" />
               </div>
               <div>
-                <div className="flex min-h-12 flex-wrap items-center gap-x-4 gap-y-1">
+                <div className="flex min-h-12 flex-wrap items-center justify-between gap-x-6 gap-y-1">
                   <h3 className="text-ink">{c.name}</h3>
-                  <p className="text-xs whitespace-nowrap tracking-[0.14em] text-ink-soft uppercase">
+                  <p className="ml-auto text-xs whitespace-nowrap tracking-[0.14em] text-ink-soft uppercase">
                     {dateRange(c.roles)}
                   </p>
                 </div>
                 <div className="mt-3 space-y-5">
                   {c.roles.map((r) => (
                     <div key={r.title}>
-                      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                      <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
                         <p className="text-sm font-medium text-ink">{r.title}</p>
-                        <p className="text-xs whitespace-nowrap tracking-[0.14em] text-ink-soft uppercase">
+                        <p className="ml-auto text-xs whitespace-nowrap tracking-[0.14em] text-ink-soft uppercase">
                           {r.dates}
                         </p>
                       </div>
@@ -183,18 +191,23 @@ export function Experience() {
             </div>
           ))}
 
-          <div className="relative grid gap-4 md:grid-cols-[64px_1fr] md:gap-8">
-            <div className="relative flex justify-center">
-              <div className="relative z-10 flex h-12 w-12 items-center justify-center bg-paper">
-                <GraduationCap className="h-6 w-6 text-ink-soft" />
-              </div>
-            </div>
-            <div>
-              <div className="flex min-h-12 flex-wrap items-center gap-x-4 gap-y-1">
-                <h3 className="text-ink">Education</h3>
-              </div>
-              <p className="mt-1 text-sm font-medium text-ink">{education.school}</p>
-              <p className="mt-1 text-sm text-ink-soft">{education.degree}</p>
+          <div className="pt-2">
+            <h3 className="eyebrow-muted">Education</h3>
+            <div className="mt-4 border-t border-rule pt-6">
+              {education.entries.map((e) => (
+                <div
+                  key={e.school}
+                  className="flex flex-wrap items-start justify-between gap-x-6 gap-y-1 pb-6"
+                >
+                  <div>
+                    <p className="text-sm font-semibold text-ink">{e.school}</p>
+                    <p className="mt-1 text-sm text-ink-soft">{e.detail}</p>
+                  </div>
+                  <p className="ml-auto text-xs whitespace-nowrap tracking-[0.14em] text-ink-soft uppercase">
+                    {e.dates}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

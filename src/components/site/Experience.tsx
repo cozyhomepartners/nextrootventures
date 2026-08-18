@@ -5,6 +5,8 @@ import hackerrank from "@/assets/co-hackerrank.png";
 import linkedin from "@/assets/co-linkedin.png";
 import agilent from "@/assets/co-agilent.png";
 import utc from "@/assets/co-united_technologies.png";
+import illinois from "@/assets/edu-illinois.png";
+import tsinghua from "@/assets/edu-tsinghua.png";
 
 type Role = { title: string; dates: string; points: string[] };
 type Company = { name: string; logo?: string; roles: Role[] };
@@ -117,28 +119,17 @@ const companies: Company[] = [
   },
 ];
 
-function dateRange(roles: Role[]) {
-  const first = roles[0];
-  const last = roles[roles.length - 1];
-  if (!first || !last) return "";
-  if (first === last) return first.dates;
-  const lastParts = last.dates.split("\u2013");
-  const firstParts = first.dates.split("\u2013");
-  if (lastParts.length < 2 || firstParts.length < 2) return first.dates;
-  const start = (lastParts[0] ?? "").trim();
-  const end = (firstParts[1] ?? "").trim();
-  return `${start} \u2013 ${end}`;
-}
-
 const education = {
   entries: [
     {
       school: "University of Illinois at Urbana-Champaign",
+      logo: illinois,
       detail: "B.S. Electrical and Computer Engineering, Minor in Computer Science",
       dates: "Class of 2006",
     },
     {
       school: "Tsinghua University",
+      logo: tsinghua,
       detail: "Chinese language and culture program",
       dates: "Summer 2006",
     },
@@ -152,20 +143,17 @@ export function Experience() {
         <h2 className="eyebrow-muted">Experience</h2>
         <div className="mt-10">
           {companies.map((c) => (
-            <div key={c.name} className="relative grid gap-4 pb-10 md:grid-cols-[64px_1fr] md:gap-8">
+            <div key={c.name} className="relative grid gap-4 pb-10 md:grid-cols-[80px_1fr] md:gap-8">
               <div className="relative flex justify-center">
                 {c.logo && (
-                  <div className="relative z-10 flex h-12 w-12 items-center justify-center bg-paper">
-                    <img src={c.logo} alt="" className="h-8 w-8 object-contain" loading="lazy" />
+                  <div className="relative z-10 flex h-16 w-16 items-center justify-center bg-paper">
+                    <img src={c.logo} alt="" className="h-14 w-14 object-contain" loading="lazy" />
                   </div>
                 )}
               </div>
               <div>
-                <div className="flex min-h-12 flex-wrap items-center justify-between gap-x-6 gap-y-1">
+                <div className="flex min-h-16 flex-wrap items-center gap-x-6 gap-y-1">
                   <h3 className="text-ink">{c.name}</h3>
-                  <p className="ml-auto text-xs whitespace-nowrap tracking-[0.14em] text-ink-soft uppercase">
-                    {dateRange(c.roles)}
-                  </p>
                 </div>
                 <div className="mt-3 space-y-5">
                   {c.roles.map((r) => (
@@ -193,19 +181,26 @@ export function Experience() {
 
           <div className="pt-2">
             <h3 className="eyebrow-muted">Education</h3>
-            <div className="mt-4 border-t border-rule pt-6">
+            <div className="mt-6">
               {education.entries.map((e) => (
                 <div
                   key={e.school}
-                  className="flex flex-wrap items-start justify-between gap-x-6 gap-y-1 pb-6"
+                  className="grid gap-4 pb-6 md:grid-cols-[80px_1fr] md:gap-8"
                 >
-                  <div>
-                    <p className="text-sm font-semibold text-ink">{e.school}</p>
-                    <p className="mt-1 text-sm text-ink-soft">{e.detail}</p>
+                  <div className="flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center bg-paper">
+                      <img src={e.logo} alt="" className="h-14 w-14 object-contain" loading="lazy" />
+                    </div>
                   </div>
-                  <p className="ml-auto text-xs whitespace-nowrap tracking-[0.14em] text-ink-soft uppercase">
-                    {e.dates}
-                  </p>
+                  <div className="flex min-h-16 flex-wrap items-center justify-between gap-x-6 gap-y-1">
+                    <div>
+                      <p className="text-sm font-semibold text-ink">{e.school}</p>
+                      <p className="mt-1 text-sm text-ink-soft">{e.detail}</p>
+                    </div>
+                    <p className="ml-auto text-xs whitespace-nowrap tracking-[0.14em] text-ink-soft uppercase">
+                      {e.dates}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>

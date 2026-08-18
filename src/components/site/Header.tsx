@@ -31,7 +31,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-rule bg-paper/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10">
         <a href="#top" aria-label="NextRoot Ventures">
-          <Wordmark className="h-6 md:h-7" />
+          <Wordmark className="h-9 md:h-11" />
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">

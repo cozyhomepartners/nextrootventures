@@ -1,4 +1,3 @@
-import { GraduationCap } from "lucide-react";
 import blind from "@/assets/co-blind.png";
 import switchboard from "@/assets/co-switchboard.png";
 import google from "@/assets/co-google.png";

@@ -42,7 +42,7 @@ export function Testimonials() {
     <section id="testimonials" className="border-b border-rule">
       <div className="mx-auto max-w-6xl px-6 py-10 md:px-10">
         <h2 className="eyebrow-muted">Companies I have worked with</h2>
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-6 pb-2 lg:flex-nowrap lg:justify-between">
+        <div className="mt-8 flex items-center gap-8 overflow-x-auto pb-2 scrollbar-hide">
           {logos.map((l) =>
             l.plain ? (
               <img

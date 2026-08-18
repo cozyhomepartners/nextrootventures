@@ -5,7 +5,7 @@ import family from "@/assets/family.jpg.asset.json";
 export function Hero() {
   return (
     <section id="top" className="border-b border-rule">
-      <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-8 md:px-10 lg:grid-cols-[1.4fr_0.6fr]">
+      <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-8 md:grid-cols-[1fr_auto] md:px-10 lg:grid-cols-[1.4fr_0.6fr]">
         <div>
           <span className="eyebrow-muted">Go-to-market & real estate consulting</span>
           <h1 className="mt-4 max-w-[34rem] text-ink">Build revenue. Build roots.</h1>
@@ -33,7 +33,7 @@ export function Hero() {
             </a>
           </div>
         </div>
-        <div className="w-full max-w-[320px] justify-self-end border border-rule">
+        <div className="w-full max-w-[280px] justify-self-center border border-rule md:max-w-[260px] md:justify-self-end lg:max-w-[320px]">
           <img
             src={family.url}
             alt="Charles Hsieh with his wife and two children outdoors"

@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import logo from "@/assets/nextroot-logo.svg";
 
 export const CALENDLY = "https://calendly.com/charleschsieh/30-minutes";
-export const LINKEDIN = "https://www.linkedin.com/in/charleschsieh/";
+export const LINKEDIN = "https://www.linkedin.com/in/chsieh";
 
 const links = [
   { label: "Services", href: "#services" },

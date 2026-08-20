@@ -6,7 +6,7 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-10 md:px-10">
         <h2 className="max-w-none text-rust">Let's figure out your next move.</h2>
         <p className="mt-4 max-w-none text-base text-ink-soft">
-          First sales playbook or first rental property — start with a free consultation.
+          First sales playbook or first rental property. Start with a free consultation.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <a

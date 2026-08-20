@@ -28,7 +28,7 @@ export function Footer() {
         </div>
         <div className="mt-16 flex flex-wrap items-center justify-between gap-4 border-t border-rule pt-6 text-xs tracking-[0.14em] text-ink-soft uppercase">
           <Wordmark className="h-6" />
-          <span>Charles Hsieh — San Francisco, CA</span>
+          <span>Charles Hsieh, San Francisco, CA</span>
           <a href={LINKEDIN} target="_blank" rel="noreferrer" className="hover:text-ink">
             LinkedIn ↗
           </a>

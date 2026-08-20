@@ -7,7 +7,7 @@ const steps = [
   {
     n: "02",
     title: "Build",
-    body: "We install the plan: motion, pricing, and metrics — or market, criteria, and underwriting model.",
+    body: "We install the plan. For GTM that means motion, pricing, and metrics. For real estate that means market, criteria, and an underwriting model.",
   },
   {
     n: "03",

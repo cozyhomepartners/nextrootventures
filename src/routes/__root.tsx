@@ -77,19 +77,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "NextRoots Ventures | GTM & Real Estate Investing Consulting" },
+      { title: "NextRoot Ventures | GTM & Real Estate Investing Consulting" },
       {
         name: "description",
         content:
-          "NextRoots Ventures — Charles Hsieh's consulting practice: go-to-market leadership for founders and hands-on guidance for new real estate investors.",
+          "Charles Hsieh's consulting practice. Go-to-market leadership for founders and hands-on guidance for new real estate investors.",
       },
       { name: "author", content: "Charles Hsieh" },
-      { property: "og:site_name", content: "NextRoots Ventures" },
+      { property: "og:site_name", content: "NextRoot Ventures" },
       {
         name: "google-site-verification",
         content: "iUB8KihjwRv3AJHccCoPMzBtATgOYtsqtGG_W-wlMuA",
       },
-      { property: "og:title", content: "NextRoots Ventures | GTM & Real Estate Investing Consulting" },
+      { property: "og:title", content: "NextRoot Ventures | GTM & Real Estate Investing Consulting" },
       {
         property: "og:description",
         content:

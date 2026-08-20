@@ -68,7 +68,7 @@ export function Testimonials() {
             <figure key={q.author} className="border-t border-rule pt-5">
               <blockquote className="text-sm text-ink">“{q.quote}”</blockquote>
               <figcaption className="mt-4 text-xs tracking-[0.14em] text-ink-soft uppercase">
-                {q.author} — {q.role}
+                {q.author}, {q.role}
               </figcaption>
             </figure>
           ))}

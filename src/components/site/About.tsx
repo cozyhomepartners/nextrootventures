@@ -6,7 +6,7 @@ export function About() {
         <p className="mt-5 max-w-none text-base text-ink-soft">
           I moved from Taiwan at twelve, studied electrical and computer engineering at Illinois, and
           spent two decades building revenue teams from seed stage to Google scale. Along the way I
-          built a single-family rental portfolio — NextRoot Ventures is where both halves live.
+          built a single-family rental portfolio. NextRoot Ventures is where both halves live.
         </p>
       </div>
     </section>

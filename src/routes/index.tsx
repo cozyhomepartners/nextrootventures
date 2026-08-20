@@ -9,7 +9,7 @@ import { Footer } from "@/components/site/Footer";
 
 const title = "NextRoot Ventures | GTM & Real Estate Investing Consulting";
 const description =
-  "NextRoot Ventures — Charles Hsieh's consulting practice: fractional go-to-market leadership for founders and hands-on guidance for new real estate investors.";
+  "Charles Hsieh's consulting practice. Fractional go-to-market leadership for founders and hands-on guidance for new real estate investors.";
 const url = "https://tryscalegtm.com/";
 
 export const Route = createFileRoute("/")({

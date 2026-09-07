@@ -95,7 +95,7 @@ const companies: Company[] = [
   },
   {
     name: "Keysight Technologies",
-    logo: keysight,
+    logo: keysightIcon.url,
     roles: [
       {
         title: "Strategic Account Executive",

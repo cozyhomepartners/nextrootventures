@@ -3,7 +3,7 @@ import switchboard from "@/assets/co-switchboard.png";
 import google from "@/assets/co-google.png";
 import hackerrank from "@/assets/co-hackerrank.png";
 import linkedin from "@/assets/co-linkedin.png";
-import keysight from "@/assets/co-keysight.svg";
+import keysightIcon from "@/assets/keysight-icon.png.asset.json";
 import utc from "@/assets/co-united_technologies.png";
 import illinois from "@/assets/edu-illinois.png";
 import tsinghua from "@/assets/edu-tsinghua.png";
@@ -95,7 +95,7 @@ const companies: Company[] = [
   },
   {
     name: "Keysight Technologies",
-    logo: keysight,
+    logo: keysightIcon.url,
     roles: [
       {
         title: "Strategic Account Executive",

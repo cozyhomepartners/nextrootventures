@@ -3,7 +3,7 @@ import switchboard from "@/assets/co-switchboard.png";
 import google from "@/assets/co-google.png";
 import hackerrank from "@/assets/co-hackerrank.png";
 import linkedin from "@/assets/co-linkedin.png";
-import agilent from "@/assets/co-agilent.png";
+import keysight from "@/assets/co-keysight.svg";
 import utc from "@/assets/co-united_technologies.png";
 import illinois from "@/assets/edu-illinois.png";
 import tsinghua from "@/assets/edu-tsinghua.png";
@@ -94,8 +94,8 @@ const companies: Company[] = [
     ],
   },
   {
-    name: "Agilent Technologies",
-    logo: agilent,
+    name: "Keysight Technologies",
+    logo: keysight,
     roles: [
       {
         title: "Strategic Account Executive",

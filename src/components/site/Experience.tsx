@@ -13,14 +13,19 @@ type Company = { name: string; logo?: string; roles: Role[] };
 
 const companies: Company[] = [
   {
+    name: "Nace AI",
+    roles: [
+      {
+        title: "Vice President of Sales",
+        dates: "Nov 2026 – Present",
+        points: [],
+      },
+    ],
+  },
+  {
     name: "Blind",
     logo: blind,
     roles: [
-      {
-        title: "Advisor to CEO",
-        dates: "Jun 2026 – Present",
-        points: ["Advising the CEO on go-to-market strategy, product direction, and US market expansion."],
-      },
       {
         title: "Vice President of Sales and Product, North America",
         dates: "Feb 2023 – May 2026",
@@ -169,14 +174,14 @@ export function Experience() {
                           {r.dates}
                         </p>
                       </div>
-                      <ul className="mt-2 space-y-1">
+                      {r.points.length > 0 && <ul className="mt-2 space-y-1">
                         {r.points.map((p) => (
                           <li key={p} className="flex gap-3 text-sm text-ink-soft">
                             <span className="text-rust">—</span>
                             <span>{p}</span>
                           </li>
                         ))}
-                      </ul>
+                      </ul>}
                     </div>
                   ))}
                 </div>

@@ -7,10 +7,10 @@ import { Experience } from "@/components/site/Experience";
 import { Testimonials } from "@/components/site/Testimonials";
 import { Footer } from "@/components/site/Footer";
 
-const title = "NextRoot Ventures | GTM & Real Estate Investing Consulting";
+const title = "Fractional Sales & Real Estate Consulting | NextRoot Ventures";
 const description =
-  "Charles Hsieh's consulting practice. Fractional go-to-market leadership for founders and hands-on guidance for new real estate investors.";
-const url = "https://tryscalegtm.com/";
+  "Charles Hsieh offers fractional sales leadership and GTM consulting for startup founders, plus real estate investment consulting. Book a free consultation.";
+const url = "https://nextrootventures.com/";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -22,6 +22,8 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: url },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
     ],
     links: [{ rel: "canonical", href: url }],
     scripts: [
@@ -30,37 +32,51 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@graph": [
-            { "@type": "WebSite", name: "NextRoot Ventures", url },
+            { "@type": "WebSite", "@id": `${url}#website`, name: "NextRoot Ventures", url },
             {
               "@type": "Organization",
+              "@id": `${url}#organization`,
               name: "NextRoot Ventures",
               url,
               description,
-              founder: { "@type": "Person", name: "Charles Hsieh" },
+              founder: { "@id": `${url}#charles-hsieh` },
+              hasOfferCatalog: {
+                "@type": "OfferCatalog",
+                name: "Consulting services",
+                itemListElement: [
+                  { "@type": "Offer", itemOffered: { "@id": `${url}#gtm-consulting` } },
+                  { "@type": "Offer", itemOffered: { "@id": `${url}#real-estate-consulting` } },
+                ],
+              },
             },
             {
               "@type": "Person",
+              "@id": `${url}#charles-hsieh`,
               name: "Charles Hsieh",
               jobTitle: "Founder, NextRoot Ventures",
               url,
-              sameAs: ["https://www.linkedin.com/in/charleschsieh/", "https://charleshsieh.com/"],
+              sameAs: ["https://www.linkedin.com/in/chsieh", "https://charleshsieh.com/"],
             },
             {
               "@type": "Service",
-              name: "Tech go-to-market consulting",
+              "@id": `${url}#gtm-consulting`,
+              name: "Fractional sales leadership and tech go-to-market consulting",
+              url: `${url}#services`,
               serviceType: "Fractional sales and GTM leadership",
               description:
                 "V1 GTM playbooks, pricing and packaging, founder-led sales handoff, and first sales hires for seed to Series B founders.",
-              provider: { "@type": "Organization", name: "NextRoot Ventures" },
+              provider: { "@id": `${url}#organization` },
               areaServed: "US",
             },
             {
               "@type": "Service",
-              name: "Real estate investing consulting",
+              "@id": `${url}#real-estate-consulting`,
+              name: "Real estate investment consulting",
+              url: `${url}#services`,
               serviceType: "Real estate investing advisory",
               description:
                 "How to get started in real estate investing: market selection, underwriting, financing, management, and portfolio P&L tracking.",
-              provider: { "@type": "Organization", name: "NextRoot Ventures" },
+              provider: { "@id": `${url}#organization` },
               areaServed: "US",
             },
           ],

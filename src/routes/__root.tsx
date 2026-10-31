@@ -6,6 +6,7 @@ import {
   useRouter,
   HeadContent,
   Scripts,
+  type ErrorComponentProps,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
@@ -34,11 +35,11 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+    reportLovableError(error instanceof Error ? error : new Error(String(error)), { boundary: "tanstack_root_error_component" });
   }, [error]);
 
   return (
@@ -77,23 +78,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "NextRoot Ventures | GTM & Real Estate Investing Consulting" },
-      {
-        name: "description",
-        content:
-          "Charles Hsieh's consulting practice. Go-to-market leadership for founders and hands-on guidance for new real estate investors.",
-      },
       { name: "author", content: "Charles Hsieh" },
       { property: "og:site_name", content: "NextRoot Ventures" },
       {
         name: "google-site-verification",
         content: "iUB8KihjwRv3AJHccCoPMzBtATgOYtsqtGG_W-wlMuA",
-      },
-      { property: "og:title", content: "NextRoot Ventures | GTM & Real Estate Investing Consulting" },
-      {
-        property: "og:description",
-        content:
-          "Go-to-market consulting for founders and real estate investing guidance from an active operator.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

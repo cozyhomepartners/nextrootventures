@@ -1,4 +1,5 @@
 import blind from "@/assets/co-blind.png";
+import naceLogo from "@/assets/nace-logo.svg.asset.json";
 import switchboard from "@/assets/co-switchboard.png";
 import google from "@/assets/co-google.png";
 import hackerrank from "@/assets/co-hackerrank.png";
@@ -14,6 +15,7 @@ type Company = { name: string; logo?: string; roles: Role[] };
 const companies: Company[] = [
   {
     name: "Nace AI",
+    logo: naceLogo.url,
     roles: [
       {
         title: "Vice President of Sales",

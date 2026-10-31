@@ -5,7 +5,7 @@ const tracks = [
   {
     kicker: "Track 01",
     title: "Tech go-to-market consulting",
-    intro: "For seed to Series B founders who need a proven motion before hiring a full-time VP of Sales.",
+    intro: "Fractional sales leadership for seed to Series B founders who need a proven motion before hiring a full-time VP of Sales.",
     items: [
       "First revenue from zero: ICP, outbound, discovery and demo scripts",
       "Founder-led sales turned into a documented playbook",
@@ -36,7 +36,7 @@ export function Expertise() {
           {tracks.map((t) => (
             <div key={t.title}>
               <span className="eyebrow-muted">{t.kicker}</span>
-              <h3 className="mt-3 text-ink">{t.title}</h3>
+              <h2 className="mt-3 text-lg font-semibold leading-[1.4] tracking-normal text-ink">{t.title}</h2>
               <p className="mt-3 max-w-lg text-sm text-ink-soft">{t.intro}</p>
               <ul className="mt-6 space-y-3">
                 {t.items.map((i) => (
